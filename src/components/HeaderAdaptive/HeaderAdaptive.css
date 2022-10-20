@@ -1,0 +1,41 @@
+.header_adaptive {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .header_adaptive {
+    display: flex;
+    flex-direction: column;
+  }
+  .button_header_adaptive {
+    width: 50%;
+    height: 10%;
+    border: 2px solid #000f08;
+    margin: 25px 0 50px 100px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    color: #000f08;
+    background: transparent;
+    cursor: pointer;
+  }
+  .title_adaptive {
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    color: #000f08;
+    padding: 60px 30px 0;
+    text-align: center;
+  }
+  .text_header_adaptive {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    color: #000f08;
+    padding-top: 50px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 315px) {
+  .title_adaptive {
+    font-size: 28px;
+  }
+}
