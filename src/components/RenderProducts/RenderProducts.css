@@ -1,0 +1,22 @@
+.products_sale {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-top: 100px;
+}
+.adaptive_view {
+  display: none;
+}
+.products_sale_items {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .invisible {
+    display: none;
+  }
+  .adaptive_view {
+    display: flex;
+  }
+}

@@ -1,7 +1,19 @@
 import Header from '../Header/Header';
+import FilterBlock from '../FilterBlock/FilterBlock';
+import SaleProducts from '../SaleProducts/SaleProducts';
+import Shop from '../Shop/Shop';
+import Updates from '../Updates/Updates';
 
 const App = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <FilterBlock />
+      <SaleProducts />
+      <Shop />
+      <Updates />
+    </>
+  );
 };
 
 export default App;

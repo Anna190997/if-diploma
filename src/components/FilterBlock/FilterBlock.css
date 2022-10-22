@@ -1,0 +1,17 @@
+.filter_wrapper {
+  padding: 140px 0 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filter_icon {
+  width: 35%;
+  height: 50%;
+  padding: 20px 0;
+}
+@media screen and (max-width: 500px) {
+  .filter_wrapper {
+    padding: 60px 0 60px;
+  }
+}

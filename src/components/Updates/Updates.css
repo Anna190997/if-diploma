@@ -1,0 +1,67 @@
+.update_title {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #000f08;
+}
+.updates {
+  padding-top: 70px;
+}
+.update_text {
+  padding-top: 30px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+.update_form {
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.updates_input {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid #383838;
+  width: 40%;
+  height: 40px;
+}
+::placeholder {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+}
+input {
+  color: #383838;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.updates_button {
+  background-color: #ffffff;
+  height: 40px;
+  color: #000f08;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 3px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 2px solid #383838;
+}
+@media screen and (max-width: 600px) {
+  .updates_input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .updates_button {
+    padding-bottom: 2px;
+  }
+  .update_text {
+    font-size: 12px;
+  }
+}

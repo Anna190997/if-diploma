@@ -1,0 +1,12 @@
+.title_shop {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  padding: 30px 60px 30px 0;
+  color: #000f08;
+}
+@media screen and (max-width: 500px) {
+  .title_shop {
+    font-size: 18px;
+  }
+}
