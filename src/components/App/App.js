@@ -1,19 +1,17 @@
-import Header from '../Header/Header';
-import FilterBlock from '../FilterBlock/FilterBlock';
-import SaleProducts from '../SaleProducts/SaleProducts';
-import Shop from '../Shop/Shop';
-import Updates from '../Updates/Updates';
-import Footer from '../Footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainPage from "../MainPage/MainPage";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
 const App = () => {
+
   return (
     <>
-      <Header />
-      <FilterBlock />
-      <SaleProducts />
-      <Shop />
-      <Updates />
-      <Footer />
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/catalog/:id" element={<ProductDetails />} />
+            </Routes>
+        </BrowserRouter>
     </>
   );
 };
