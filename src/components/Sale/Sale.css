@@ -39,3 +39,11 @@
     left: 5%;
   }
 }
+@media screen and (max-width: 380px) {
+  .sale {
+    top: 63%;
+    font-size: 12px;
+    left: 5%;
+    width: 25%;
+  }
+}

@@ -3,6 +3,7 @@ import FilterBlock from '../FilterBlock/FilterBlock';
 import SaleProducts from '../SaleProducts/SaleProducts';
 import Shop from '../Shop/Shop';
 import Updates from '../Updates/Updates';
+import Footer from '../Footer/Footer';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <SaleProducts />
       <Shop />
       <Updates />
+      <Footer />
     </>
   );
 };

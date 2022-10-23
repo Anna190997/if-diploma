@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Icon from '../Icon/Icon';
 import Sale from '../Sale/Sale';
 
-const ProductCard = ({ urlImg, currency, valuePrice }) => {
+const ProductCard = ({ urlImg, valuePrice }) => {
   const [mouse, setMouse] = useState(false);
 
   const mouseEver = (event) => {
@@ -13,7 +13,7 @@ const ProductCard = ({ urlImg, currency, valuePrice }) => {
   };
 
   const saleRender = Math.floor(Math.random() * 100);
-  const saleCount = Math.ceil(valuePrice - (valuePrice * saleRender) / 100);
+  const saleCount = Math.ceil(valuePrice / (100- saleRender) * 100);
 
   return (
     <div className="product_offer">
@@ -22,9 +22,8 @@ const ProductCard = ({ urlImg, currency, valuePrice }) => {
       <Icon id="wishlist-icon" icon="wishlist_add" />
       <Sale saleRender={saleRender} />
       <div className="price">
-        <div className="currency">{currency}</div>
-        <div className="value_price">{valuePrice}</div>
-        <div className="price_sale">$ {saleCount}</div>
+        <div className="value_price">$ {saleCount}</div>
+        <div className="price_sale">$ {valuePrice}</div>
       </div>
     </div>
   );

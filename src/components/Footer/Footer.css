@@ -1,0 +1,119 @@
+.footer {
+  width: 100%;
+}
+.footer_menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 120px 0 60px;
+}
+.footer_items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.service_items,
+.info_items,
+.follow_items,
+.contact_items {
+  list-style: none;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+  font-style: normal;
+  color: #000000;
+}
+.items {
+  list-style: none;
+  padding-top: 24px;
+}
+.footer_links {
+  color: #000000;
+  text-decoration: none;
+}
+.service_items:first-child,
+.info_items:first-child,
+.follow_items:first-child,
+.contact_items:first-child {
+  padding-top: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 545;
+}
+.col-2 {
+  width: 25%;
+}
+.icon_list_invisible {
+  display: none;
+}
+.footer_logo {
+  width: 130%;
+  height: 15px;
+  padding-top: 26px;
+}
+.footer_img {
+  display: flex;
+  flex-direction: row;
+}
+.links_logo {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.contacts_links {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 860px) {
+  .service_items:first-child,
+  .info_items:first-child,
+  .follow_items:first-child,
+  .contact_items:first-child {
+    font-size: 14px;
+  }
+  .items {
+    font-size: 12px;
+  }
+  .footer_logo {
+    padding-top: 24px;
+  }
+  .links_logo {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer_menu {
+    flex-direction: column;
+    padding: 20px 0 60px;
+  }
+  .footer_items {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #d8d8d8;
+  }
+  .col-2 {
+    width: 100%;
+  }
+  .first {
+    border-top: 2px dashed #d8d8d8;
+  }
+  .icon_list_invisible {
+    display: flex;
+    width: 3%;
+    height: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  .adaptive_footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .service_adaptive {
+    padding-left: 30px;
+  }
+  .links_logo {
+    padding-left: 0;
+    width: 0;
+  }
+}

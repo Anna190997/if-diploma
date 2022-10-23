@@ -15,7 +15,7 @@ const Navigate = () => {
   return (
     <div className="container">
       <nav className="navigate_panel">
-        <Icon id="hamburger-menu-icon" icon="icon_invisible" show={showMenu} />
+        <Icon id={!menu?("hamburger-menu-icon"):("close")} icon="icon_invisible" show={showMenu} />
         <NavigateElem navigate_context="NEW ARRIVALS" />
         <NavigateElem navigate_context="SHOP" />
         <NavigateElem navigate_context="COLLECTIONS" />
