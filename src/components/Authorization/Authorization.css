@@ -1,0 +1,104 @@
+.container_auth {
+  background-color: #bdbdbd;
+  width: 100%;
+  height: max-content;
+}
+.auth_wrapper {
+  padding: 40px 0;
+}
+.auth_form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  background-color: #ffffff;
+  padding: 15px 15px;
+}
+.auth_form_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.auth_close {
+  fill: #000f08;
+  width: 10%;
+  height: 20px;
+  cursor: pointer;
+}
+.form_title {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  color: #000f08;
+  font-size: 24px;
+}
+.input_auth {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.border {
+  border-bottom: none;
+  width: 100%;
+}
+.policy_auth {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+.check_auth {
+  width: 10%;
+}
+input[type='checkbox']:checked {
+  background-color: #000f08;
+}
+.policy_text {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  color: #000f08;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.text_form {
+  padding-top: 40px;
+  font-family: Helvetica Neue LT Std, sans-serif;
+  color: #8c8c8c;
+  font-size: 12px;
+}
+.links_auth {
+  color: #000f08;
+  padding-left: 3px;
+}
+.button_auth {
+  margin: 15px auto;
+  width: 50%;
+  height: 8%;
+  background-color: #000f08;
+  color: #ffffff;
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.links_auth_but {
+  padding-top: 20px;
+  font-family: Helvetica Neue LT Std, sans-serif;
+  color: #000f08;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 470px) {
+  .auth_form {
+    width: 300px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .auth_form {
+    width: 310px;
+    height: 500px;
+  }
+  .form_title {
+    font-size: 16px;
+  }
+  .container_auth {
+    background-color: #5e5e5e;
+  }
+}

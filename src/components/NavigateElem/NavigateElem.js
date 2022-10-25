@@ -1,8 +1,8 @@
 import './NavigateElem.css';
 
-const NavigateElem = ({ navigate_context }) => {
+const NavigateElem = ({ navigate_context, navPage }) => {
   return (
-    <a href="#" className="navigate_elem">
+    <a href="#" className="navigate_elem" onClick={navPage}>
       {navigate_context}
     </a>
   );

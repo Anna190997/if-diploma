@@ -6,11 +6,11 @@ import HeaderAdaptive from '../HeaderAdaptive/HeaderAdaptive';
 import Background from '../../../public/images/img/background.png';
 import './Header.css';
 
-const Header = () => {
+const Header = ({searchModal}) => {
   return (
     <>
       <header style={{ backgroundImage: 'url(' + Background + ')' }}>
-        <Navigate />
+        <Navigate searchModal={searchModal} />
         <Title title="title" />
         <TextHeader text_header="text_header" />
         <Button button="button_header" button_text="SHOP NEW ARRIVALS" />
