@@ -1,0 +1,27 @@
+.search_result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+.search_button_show{
+    margin-left: 40%;
+    width: 20%;
+    height: 40px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    border: 2px solid #000F08;
+    cursor: pointer;
+}
+.search_fail{
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+@media screen and (max-width: 500px) {
+    .search_wishlist{
+       top: -30%;
+        width: 10%;
+    }
+}

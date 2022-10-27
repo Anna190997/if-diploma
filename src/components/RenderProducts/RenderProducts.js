@@ -18,6 +18,7 @@ const RenderProducts = () => {
       });
   }, []);
 
+
   const arrowMore = () => {
     setArrowMax(arrowMax + 1);
     setArrowMin(arrowMin + 1);

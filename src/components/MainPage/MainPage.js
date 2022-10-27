@@ -4,13 +4,18 @@ import SaleProducts from '../SaleProducts/SaleProducts';
 import Shop from '../Shop/Shop';
 import Updates from '../Updates/Updates';
 import Footer from '../Footer/Footer';
-import ModalWeb from '../../ModalWeb/ModalWeb';
+import ModalWeb from '../ModalWeb/ModalWeb';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import ApiAction from '../../redux/actions/ApiAction';
 
 const MainPage = () => {
   const [searchModalWeb, setSearchModal] = useState(false);
   const [value, setValue] = useState('');
   const [search, setSearch] = useState([]);
+  const dispatch = useDispatch();
+  const apiResult = useSelector((state) => state.apiResult.response);
 
   const searchModal = (e) => {
     e.target.value;
@@ -20,23 +25,26 @@ const MainPage = () => {
     setValue(value);
   };
 
-  const showResult = async (e) => {
+  const showResult = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(
-        `https://modnikky-api.herokuapp.com/api/catalog?search=${value}`,
-      );
-      const resultSearch = await response.json();
-      setSearch(resultSearch);
-    } catch (err) {
-      alert('Произошла ошибка. Обновите, пожалуйста, страницу');
-    }
+    dispatch(ApiAction.fetchProduct());
+    console.log(apiResult)
+    const resultSearch = apiResult.filter((item) =>
+      Object.values(item).toString().toLowerCase().includes(value.toLowerCase()),
+    );
+    setSearch(resultSearch);
   };
 
   return (
     <>
       {searchModalWeb ? (
-        <ModalWeb searchModalClose={searchModal} onChange={handleWishChange} search={showResult} />
+        <ModalWeb
+          searchModalClose={searchModal}
+          onChange={handleWishChange}
+          search={showResult}
+          product={search}
+          valueInput={value}
+        />
       ) : (
         <Header searchModal={searchModal} />
       )}

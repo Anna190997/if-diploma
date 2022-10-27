@@ -1,13 +1,15 @@
 import './ModalWeb.css';
-import Input from '../components/Input/Input';
-import Icon from '../components/Icon/Icon';
+import Input from '../Input/Input';
+import Icon from '../Icon/Icon';
+import SearchResult from "../SearchResult/SearchResult";
 
-const ModalWeb = ({ searchModalClose, onChange, search }) => {
+const ModalWeb = ({ searchModalClose, onChange, search, product, valueInput }) => {
   const handleWishChange = (event) => {
     onChange(event.target.value);
   };
 
   return (
+      <>
     <div className="modal_web">
       <div className="container">
         <div className="modal_wrapper">
@@ -18,11 +20,14 @@ const ModalWeb = ({ searchModalClose, onChange, search }) => {
               inputPlaceholder="ENTER SEARCH TERMS"
               inputClass="updates_input search_input"
               onChange={handleWishChange}
+              value={valueInput}
             />
           </form>
         </div>
       </div>
     </div>
+        <SearchResult product={product}/>
+      </>
   );
 };
 
