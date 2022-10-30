@@ -2,9 +2,13 @@
   background-color: #bdbdbd;
   width: 100%;
   height: max-content;
+  padding-bottom: 40px;
 }
 .auth_wrapper {
-  padding: 40px 0;
+  padding: 40px 0 0;
+  height: max-content;
+  background-color: #bdbdbd;
+
 }
 .auth_form {
   margin: 0 auto;

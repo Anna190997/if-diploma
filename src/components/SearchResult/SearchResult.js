@@ -26,6 +26,7 @@ const SearchResult = ({ product }) => {
                       key={item.id}
                       currency="$"
                       valuePrice={item.price.value}
+                      catalogSearch={item.id}
                     />
                   ))}
                 </div>

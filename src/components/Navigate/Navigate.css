@@ -1,4 +1,5 @@
 .navigate_panel {
   display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
 }

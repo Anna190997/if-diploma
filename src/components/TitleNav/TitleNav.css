@@ -6,49 +6,49 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 15px 150px 0 150px;
     font-size: 40px;
   }
 }
 @media screen and (max-width: 990px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 15px 110px 0 110px;
     font-size: 34px;
   }
 }
 @media screen and (max-width: 900px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 15px 70px 0 70px;
     font-size: 24px;
   }
 }
 @media screen and (max-width: 680px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 30px 50px 0 50px;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 580px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 30px 30px 0 30px;
     font-size: 16px;
   }
 }
 @media screen and (max-width: 500px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 30px 80px 0 80px;
     font-size: 24px;
   }
 }
 @media screen and (max-width: 386px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 30px 50px 0 50px;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 315px) {
-  .title_nav {
+  .title_nav, .title_nav_product {
     padding: 30px 30px 0 30px;
     font-size: 16px;
   }

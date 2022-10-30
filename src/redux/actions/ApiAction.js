@@ -1,11 +1,4 @@
-import {API, FETCH_PRODUCT, REQUESTED_PRODUCT, REQUESTED_PRODUCT_FAILED} from '../actionsType';
-
-const apiAction = (apiArr) => {
-  return {
-    type: API,
-    payload: apiArr,
-  };
-};
+import { REQUESTED_PRODUCT, FILTER_PRODUCT, FILTER_TITLE } from '../actionsType';
 
 const requestedProduct = (apiArr) => {
   return {
@@ -14,21 +7,22 @@ const requestedProduct = (apiArr) => {
   };
 };
 
-const fetchProduct = () => {
+const filterProduct = (filterArr) => {
   return {
-    type: FETCH_PRODUCT,
+    type: FILTER_PRODUCT,
+    payload: filterArr,
   };
 };
 
-const requestedProductFailed = () => {
+const filterTitle = (filterTitle) => {
   return {
-    type: REQUESTED_PRODUCT_FAILED,
+    type: FILTER_TITLE,
+    payload: filterTitle,
   };
 };
 
 export default {
-  apiAction,
   requestedProduct,
-  fetchProduct,
-  requestedProductFailed
+  filterProduct,
+  filterTitle,
 };

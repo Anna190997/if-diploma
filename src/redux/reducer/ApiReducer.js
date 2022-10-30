@@ -1,8 +1,8 @@
-import { API } from '../actionsType';
+import { REQUESTED_PRODUCT } from '../actionsType';
 
 const apiResult = (state = [], action) => {
   switch (action.type) {
-    case API:
+    case REQUESTED_PRODUCT:
       return {
         ...state,
         response: action.payload,
@@ -11,4 +11,5 @@ const apiResult = (state = [], action) => {
       return state;
   }
 };
+
 export default apiResult;

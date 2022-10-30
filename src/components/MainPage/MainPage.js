@@ -7,14 +7,12 @@ import Footer from '../Footer/Footer';
 import ModalWeb from '../ModalWeb/ModalWeb';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import ApiAction from '../../redux/actions/ApiAction';
+import FilterResult from '../FilterResult/FilterResult';
 
 const MainPage = () => {
   const [searchModalWeb, setSearchModal] = useState(false);
   const [value, setValue] = useState('');
   const [search, setSearch] = useState([]);
-  const dispatch = useDispatch();
   const apiResult = useSelector((state) => state.apiResult.response);
 
   const searchModal = (e) => {
@@ -27,8 +25,6 @@ const MainPage = () => {
 
   const showResult = (e) => {
     e.preventDefault();
-    dispatch(ApiAction.fetchProduct());
-    console.log(apiResult)
     const resultSearch = apiResult.filter((item) =>
       Object.values(item).toString().toLowerCase().includes(value.toLowerCase()),
     );
@@ -49,6 +45,7 @@ const MainPage = () => {
         <Header searchModal={searchModal} />
       )}
       <FilterBlock />
+      <FilterResult />
       <SaleProducts />
       <Shop />
       <Updates />
