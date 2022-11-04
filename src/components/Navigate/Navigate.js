@@ -18,6 +18,7 @@ const Navigate = ({
   showMain,
   countBag,
   navBag,
+  navWish,
 }) => {
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
@@ -28,6 +29,10 @@ const Navigate = ({
 
   const auth = () => {
     navigate('/auth');
+  };
+
+  const bagPage = () => {
+    navigate('/catalog/bag');
   };
 
   const authOut = () => {
@@ -64,8 +69,13 @@ const Navigate = ({
         )}
         <NavigateElem navigate_context="BAG" navigate_elem={navigate_elem} navPage={navBag} />
         <div className={countBag}>({count})</div>
-        <Icon id="shopping-cart-icon" icon={icon_invisible} navigate_elem={navigate_elem} />
-        <Icon id="wishlist-icon" icon={icon} navigate_elem={navigate_elem} />
+        <Icon
+          id="shopping-cart-icon"
+          icon={icon_invisible}
+          navigate_elem={navigate_elem}
+          show={bagPage}
+        />
+        <Icon id="wishlist-icon" icon={icon} navigate_elem={navigate_elem} show={navWish} />
       </nav>
       {menu && <AdaptiveMenu adaptive_menu_link={adaptive_menu_link} />}
     </div>

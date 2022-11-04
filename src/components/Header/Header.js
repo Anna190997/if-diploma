@@ -8,11 +8,15 @@ import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
 const Header = ({ searchModal }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const navBag = () => {
-        navigate('/catalog/bag');
-    };
+  const navBag = () => {
+    navigate('/catalog/bag');
+  };
+
+  const navWish = () => {
+    navigate('/catalog/wishList');
+  };
   return (
     <>
       <header style={{ backgroundImage: 'url(' + Background + ')' }}>
@@ -23,8 +27,9 @@ const Header = ({ searchModal }) => {
           icon="icon"
           icon_invisible="icon_invisible"
           adaptive_menu_link="adaptive_menu_link"
-          countBag = "countBag"
+          countBag="countBag"
           navBag={navBag}
+          navWish={navWish}
         />
         <Title title="title" />
         <TextHeader text_header="text_header" />

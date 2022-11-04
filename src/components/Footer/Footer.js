@@ -44,15 +44,15 @@ const Footer = () => {
                     <li className="service_items">CUSTOMER SERVICE</li>
                   </div>
                   <div className="invisible">
-                    {CUSTOMERSERVICE.map((item) => (
-                      <FooterLinks linksName={item} />
+                    {CUSTOMERSERVICE.map((item, index) => (
+                      <FooterLinks linksName={item} key={index} />
                     ))}
                   </div>
                   {menuFooter.customer && (
                     <>
                       <ul className="service_adaptive">
-                        {CUSTOMERSERVICE.map((item) => (
-                          <FooterLinks linksName={item} />
+                        {CUSTOMERSERVICE.map((item, index) => (
+                          <FooterLinks linksName={item} key={index} />
                         ))}
                       </ul>
                     </>
@@ -78,15 +78,15 @@ const Footer = () => {
                     <li className="info_items">INFO</li>
                   </div>
                   <div className="invisible">
-                    {INFO.map((item) => (
-                      <FooterLinks linksName={item} />
+                    {INFO.map((item, index) => (
+                      <FooterLinks linksName={item} key={index} />
                     ))}
                   </div>
                   {menuFooter.info && (
                     <>
                       <ul className="service_adaptive">
-                        {INFO.map((item) => (
-                          <FooterLinks linksName={item} />
+                        {INFO.map((item, index) => (
+                          <FooterLinks linksName={item} key={index} />
                         ))}
                       </ul>
                     </>
@@ -119,15 +119,15 @@ const Footer = () => {
                     </div>
                     <div className="contacts_links">
                       <div className="invisible">
-                        {FOLLOWUS.map((item) => (
-                          <FooterLinks linksName={item} />
+                        {FOLLOWUS.map((item, index) => (
+                          <FooterLinks linksName={item} key={index} />
                         ))}
                       </div>
                       {menuFooter.follow && (
                         <>
                           <ul className="service_adaptive">
-                            {FOLLOWUS.map((item) => (
-                              <FooterLinks linksName={item} />
+                            {FOLLOWUS.map((item, index) => (
+                              <FooterLinks linksName={item} key={index} />
                             ))}
                           </ul>
                         </>
@@ -155,15 +155,15 @@ const Footer = () => {
                     <li className="contact_items">CONTACT US</li>
                   </div>
                   <div className="invisible">
-                    {CONTACTUS.map((item) => (
-                      <FooterLinks linksName={item} />
+                    {CONTACTUS.map((item, index) => (
+                      <FooterLinks linksName={item} key={index} />
                     ))}
                   </div>
                   {menuFooter.contact && (
                     <>
                       <ul className="service_adaptive">
-                        {CONTACTUS.map((item) => (
-                          <FooterLinks linksName={item} />
+                        {CONTACTUS.map((item, index) => (
+                          <FooterLinks linksName={item} key={index} />
                         ))}
                       </ul>
                     </>

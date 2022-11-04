@@ -3,8 +3,10 @@ import userStatus from './AuthReducer';
 import apiResult from './ApiReducer';
 import filterReducer from './FilterReducer';
 import filterTitle from './FilterTitleReducer';
-import counter from "./CountReducer";
-import addToBagReducer from "./AddToBagReducer";
+import counter from './CountReducer';
+import bagReducer from './BagReducer';
+import wishListReducer from './WishListReducer';
+import counterWish from './CountWishReducer';
 
 export default combineReducers({
   userStatus,
@@ -12,5 +14,7 @@ export default combineReducers({
   filterReducer,
   filterTitle,
   counter,
-  addToBagReducer
+  bagReducer,
+  wishListReducer,
+  counterWish,
 });

@@ -55,6 +55,7 @@ const RenderProducts = () => {
                   currency="$"
                   valuePrice={item.price.value}
                   catalogSearch={item.id}
+                  productId={item.id}
                 />
               ))}
               <Arrow

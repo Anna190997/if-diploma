@@ -1,24 +1,37 @@
-import './BagCard.css';
 import Icon from '../Icon/Icon';
-import BagAction from "../../redux/actions/BagAction";
-import { useDispatch } from 'react-redux';
-import CountAction from "../../redux/actions/CountAction";
+import WishListActions from "../../redux/actions/WishListActions";
+import { useDispatch, useSelector } from 'react-redux';
+import Button from '../Button/Button';
+import CountAction from '../../redux/actions/CountAction';
+import BagAction from '../../redux/actions/BagAction';
+import CountWish from '../../redux/actions/CountWish';
+import { useState } from 'react';
 
-const BagCard = ({
+const WishListCard = ({
   bagImg,
   nameCardBag,
   currency,
   valuePrice,
   colorProduct,
+  productId,
   id,
-  deleteProduct,
 }) => {
+  const [disabled, setDisabled] = useState(false);
+
   const dispatch = useDispatch();
 
-  const removeProduct = () => {
-    dispatch(BagAction.removeBagAction(deleteProduct));
-    dispatch(CountAction.decrement());
-  }
+  const removeProductWishList = () => {
+    dispatch(WishListActions.removeWishListAction(productId));
+    dispatch(CountWish.decrementWish());
+  };
+  const apiResult = useSelector((state) => state.apiResult.response);
+  const addToBag = (e) => {
+    e.target.value;
+    setDisabled(!disabled);
+    dispatch(CountAction.increment());
+    const resultAdd = apiResult.filter((item) => Object.values(item).includes(productId));
+    dispatch(BagAction.addToBagAction(resultAdd));
+  };
 
   return (
     <div className="bag_card">
@@ -48,19 +61,16 @@ const BagCard = ({
               <option className="color_item">L</option>
             </select>
           </div>
-          <div className="color_detail_bag_card">
-            <span className="color_name">QUANTITY:</span>
-            <select className="select_color">
-              <option className="color_item">1</option>
-              <option className="color_item">2</option>
-              <option className="color_item">3</option>
-              <option className="color_item">4</option>
-              <option className="color_item">5</option>
-            </select>
+          <div className="button_product">
+            {!disabled ? (
+              <Button button="add_to_bag" button_text="ADD TO BAG" onClick={addToBag} />
+            ) : (
+              <Button button="add_to_bag" button_text="ADDED TO BAG" disabled={true} />
+            )}
           </div>
           <div className="remove_bag_wrap">
-            <Icon id="remove-icon" icon="remove_bag_icon" show={removeProduct} />
-            <span className="remove_bag" id={id} onClick={removeProduct}>
+            <Icon id="remove-icon" icon="remove_bag_icon" show={removeProductWishList} />
+            <span className="remove_bag" id={id} onClick={removeProductWishList}>
               REMOVE
             </span>
           </div>
@@ -71,4 +81,4 @@ const BagCard = ({
   );
 };
 
-export default BagCard;
+export default WishListCard;

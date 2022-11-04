@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actionsType';
+import { INCREMENT, DECREMENT, NULL } from '../actionsType';
 
 const increment = () => ({
   type: INCREMENT,
@@ -8,4 +8,8 @@ const decrement = () => ({
   type: DECREMENT,
 });
 
-export default { increment, decrement };
+const nullCounter = () => ({
+  type: NULL,
+});
+
+export default { increment, decrement, nullCounter };

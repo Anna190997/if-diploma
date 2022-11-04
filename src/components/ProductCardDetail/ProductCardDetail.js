@@ -5,7 +5,9 @@ import Icon from '../Icon/Icon';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CountAction from '../../redux/actions/CountAction';
-import addToBagAction from '../../redux/actions/AddToBagAction';
+import BagAction from '../../redux/actions/BagAction';
+import WishListActions from "../../redux/actions/WishListActions";
+import CountWish from "../../redux/actions/CountWish";
 
 const ProductCardDetail = ({
   detailImages,
@@ -23,6 +25,8 @@ const ProductCardDetail = ({
     shipping: false,
     composition: false,
   });
+  const [disabled, setDisabled] = useState(false);
+  const [activeWish, setActiveWish] = useState()
   const dispatch = useDispatch();
   const apiResult = useSelector((state) => state.apiResult.response);
 
@@ -33,13 +37,21 @@ const ProductCardDetail = ({
     setProductDescription((prevState) => ({ ...prevState, [field]: false }));
   };
 
-
-  const addToBag = () => {
+  const addToBag = (e) => {
+    e.target.value;
+    setDisabled(!disabled);
     dispatch(CountAction.increment());
     const resultAdd = apiResult.filter((item) => Object.values(item).includes(productId));
-    dispatch(addToBagAction(resultAdd));
+    dispatch(BagAction.addToBagAction(resultAdd));
   };
 
+  const addToWishList = (e) => {
+    e.target.value
+    setActiveWish(!activeWish);
+    const wishAdd = apiResult.filter((item) => Object.values(item).includes(productId));
+    dispatch(WishListActions.wishListAddAction(wishAdd));
+    dispatch(CountWish.incrementWish());
+  }
 
   return (
     <div className="product_card_detail">
@@ -66,10 +78,17 @@ const ProductCardDetail = ({
             </div>
           </div>
           <div className="button_product">
-            <Button button="add_to_bag" button_text="ADD TO BAG" onClick={addToBag} />
+            {!disabled ? (
+              <Button button="add_to_bag" button_text="ADD TO BAG" onClick={addToBag} />
+            ) : (
+              <Button button="add_to_bag" button_text="ADDED TO BAG" disabled={true} />
+            )}
+            {!activeWish ? (
             <div className="wishlist_add_product">
-              <Icon id="wishlist-icon" icon="wish_list_product" />
-            </div>
+              <Icon id="wishlist-icon" icon="wish_list_product" show={addToWishList} />
+            </div>) : ( <div className="wishlist_add_product active">
+              <Icon id="wishlist-icon" icon="wish_list_product"/>
+            </div>)}
           </div>
           <div className="description">
             <div className="details_information">
