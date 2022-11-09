@@ -1,5 +1,5 @@
 .total_price_wrapper {
-  margin: 50px 400px;
+  margin: 50px 350px;
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@
 }
 .pay_icon_wrapper {
   padding-top: 15px;
-  margin-left: 180px;
+  margin-left: 200px;
 }
 .images_pay {
   padding-right: 5px;

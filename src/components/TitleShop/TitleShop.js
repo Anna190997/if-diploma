@@ -1,7 +1,7 @@
 import './TitleShop.css';
 
 const TitleShop = ({ titleShop, shopTitleClass }) => {
-  return <div className={shopTitleClass}>{titleShop}</div>;
+  return <p className={shopTitleClass}>{titleShop}</p>;
 };
 
 export default TitleShop;

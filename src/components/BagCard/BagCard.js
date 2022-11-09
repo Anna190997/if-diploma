@@ -1,8 +1,10 @@
 import './BagCard.css';
 import Icon from '../Icon/Icon';
-import BagAction from "../../redux/actions/BagAction";
-import { useDispatch } from 'react-redux';
-import CountAction from "../../redux/actions/CountAction";
+import BagAction from '../../redux/actions/BagAction';
+import { useDispatch, useSelector } from 'react-redux';
+import CountAction from '../../redux/actions/CountAction';
+import { totalQuantity } from '../../redux/actions/TotalQuantity';
+import { useEffect } from 'react';
 
 const BagCard = ({
   bagImg,
@@ -12,13 +14,22 @@ const BagCard = ({
   colorProduct,
   id,
   deleteProduct,
+  onChange,
+  valueSelect,
 }) => {
   const dispatch = useDispatch();
+
+  const selectValue = (e) => {
+    onChange(e.target.value);
+  };
 
   const removeProduct = () => {
     dispatch(BagAction.removeBagAction(deleteProduct));
     dispatch(CountAction.decrement());
-  }
+  };
+  useEffect(() => {
+    dispatch(totalQuantity(id, valueSelect));
+  }, [valueSelect]);
 
   return (
     <div className="bag_card">
@@ -50,12 +61,22 @@ const BagCard = ({
           </div>
           <div className="color_detail_bag_card">
             <span className="color_name">QUANTITY:</span>
-            <select className="select_color">
-              <option className="color_item">1</option>
-              <option className="color_item">2</option>
-              <option className="color_item">3</option>
-              <option className="color_item">4</option>
-              <option className="color_item">5</option>
+            <select className="select_color" onChange={selectValue}>
+              <option className="color_item" value="1">
+                1
+              </option>
+              <option className="color_item" value="2">
+                2
+              </option>
+              <option className="color_item" value="3">
+                3
+              </option>
+              <option className="color_item" value="4">
+                4
+              </option>
+              <option className="color_item" value="5">
+                5
+              </option>
             </select>
           </div>
           <div className="remove_bag_wrap">

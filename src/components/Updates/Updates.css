@@ -8,6 +8,9 @@
 .updates {
   padding-top: 70px;
 }
+.update_message{
+  padding-left: 30%;
+}
 .update_text {
   padding-top: 30px;
   text-align: center;
@@ -63,5 +66,9 @@ input {
   }
   .update_text {
     font-size: 12px;
+  }
+  .update_message{
+    padding-left: 10%;
+    font-size: 18px;
   }
 }

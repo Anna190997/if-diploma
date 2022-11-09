@@ -7,6 +7,7 @@ import counter from './CountReducer';
 import bagReducer from './BagReducer';
 import wishListReducer from './WishListReducer';
 import counterWish from './CountWishReducer';
+import quantityById from './TotalQuantityReducer';
 
 export default combineReducers({
   userStatus,
@@ -17,4 +18,5 @@ export default combineReducers({
   bagReducer,
   wishListReducer,
   counterWish,
+  quantityById,
 });

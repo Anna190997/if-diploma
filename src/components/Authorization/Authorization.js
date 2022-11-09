@@ -65,7 +65,7 @@ const Authorization = () => {
           <div className="form_auth">
             <form className="auth_form" onSubmit={sign}>
               <div className="auth_form_wrapper">
-                <div className="form_title">CREATE ACCOUNT</div>
+                <p className="form_title">CREATE ACCOUNT</p>
                 <Icon id="close-icon" icon="auth_close" show={authdone} />
               </div>
               <div className="input_auth">
@@ -100,10 +100,10 @@ const Authorization = () => {
               </div>
               <div className="policy_auth">
                 <input type="checkbox" className="check_auth" required={true} />
-                <div className="policy_text">
+                <p className="policy_text">
                   Let's get personal! We'll send you only the good stuff: Exclusive early access to
                   Sale, new arrivals and promotions. No nasties.
-                </div>
+                </p>
               </div>
               <div className="text_form">
                 By signing up you agree to

@@ -10,7 +10,7 @@ const InputFilter = ({ id, icon, inputValueText }) => {
 
   const filterProduct = () => {
     const resultSearchFilter = apiResult.filter((item) =>
-      Object.values(item).toString().toLowerCase().includes(inputValueText.toLowerCase()),
+      Object.values(item).toString().toLowerCase().trim().includes(inputValueText.toLowerCase()),
     );
     dispatch(ApiAction.filterProduct(resultSearchFilter));
     dispatch(ApiAction.filterTitle(inputValueText));

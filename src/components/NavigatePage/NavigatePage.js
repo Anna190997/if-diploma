@@ -25,7 +25,7 @@ const NavigatePage = () => {
   const showResult = (e) => {
     e.preventDefault();
     const resultSearch = apiResult.filter((item) =>
-      Object.values(item).toString().toLowerCase().includes(value.toLowerCase()),
+      Object.values(item).toString().toLowerCase().trim().includes(value.toLowerCase()),
     );
     setSearch(resultSearch);
   };

@@ -3,9 +3,11 @@ import TitleShop from '../TitleShop/TitleShop';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import { useState } from 'react';
+import { sendEmail } from '../../servicies';
 
 const Updates = () => {
   const [inputEmail, setEmail] = useState('');
+  const [emailSend, setEmailSend] = useState('');
 
   const changeEmail = (inputEmail) => {
     setEmail(inputEmail);
@@ -15,43 +17,33 @@ const Updates = () => {
     changeEmail(e.target.value);
   };
 
-  const news = (e) => {
+  const newsUpdates = (e) => {
     e.preventDefault();
-    fetch(`https://modnikky-api.herokuapp.com/api/cart`, {
-      method: 'POST',
-      body: JSON.stringify({ email: inputEmail }),
-      headers: {
-        'Content-type': 'application/json',
-      },
-    })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    sendEmail(inputEmail, setEmailSend);
   };
 
   return (
     <div className="container">
       <div className="updates">
         <TitleShop shopTitleClass="update_title" titleShop="SIGN UP FOR UPDATES" />
-        <div className="update_text">
-          Sign up for exclusive early sale access and tailored new arrivals.
-        </div>
-        <form
-          className="update_form"
-
-        >
-          <Input
-            type_input="email"
-            inputClass="updates_input"
-            inputPlaceholder="Your email address"
-            onChange={change}
-          />
-          <Button button="updates_button" button_text="JOIN" onClick={news} />
-        </form>
+        {!emailSend ? (
+          <>
+            <p className="update_text">
+              Sign up for exclusive early sale access and tailored new arrivals.
+            </p>
+            <form className="update_form">
+              <Input
+                type_input="email"
+                inputClass="updates_input"
+                inputPlaceholder="Your email address"
+                onChange={change}
+              />
+              <Button button="updates_button" button_text="JOIN" onClick={newsUpdates} />
+            </form>
+          </>
+        ) : (
+          <span className="update_title update_message">{emailSend.message}</span>
+        )}
       </div>
     </div>
   );

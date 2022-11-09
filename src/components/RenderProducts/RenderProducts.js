@@ -1,9 +1,8 @@
 import './RenderProducts.css';
 import ProductCard from '../ProductCard/ProductCard';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Arrow from '../Arrow/Arrow';
-import ApiActions from '../../redux/actions/ApiAction';
-import { useDispatch } from 'react-redux';
+import {apiMain} from "../../servicies";
 
 const RenderProducts = () => {
   const [product, setProduct] = useState([]);
@@ -11,16 +10,7 @@ const RenderProducts = () => {
   const [arrowMax, setArrowMax] = useState(4);
   const [arrowMinAdapt, setArrowMinAdapt] = useState(0);
   const [arrowMaxAdapt, setArrowMaxAdapt] = useState(2);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetch('https://modnikky-api.herokuapp.com/api/catalog')
-      .then((response) => response.json())
-      .then((data) => {
-        setProduct(data);
-        dispatch(ApiActions.requestedProduct(data));
-      });
-  }, []);
+  apiMain(setProduct);
 
   const arrowMore = () => {
     setArrowMax(arrowMax + 1);

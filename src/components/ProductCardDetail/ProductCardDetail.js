@@ -26,7 +26,7 @@ const ProductCardDetail = ({
     composition: false,
   });
   const [disabled, setDisabled] = useState(false);
-  const [activeWish, setActiveWish] = useState()
+  const [activeWish, setActiveWish] = useState(false);
   const dispatch = useDispatch();
   const apiResult = useSelector((state) => state.apiResult.response);
 

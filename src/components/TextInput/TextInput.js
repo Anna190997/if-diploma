@@ -1,5 +1,5 @@
 const TextInput = ({ inputText, inputValueText }) => {
-  return <div className={inputText}>{inputValueText}</div>;
+  return <p className={inputText}>{inputValueText}</p>;
 };
 
 export default TextInput;
