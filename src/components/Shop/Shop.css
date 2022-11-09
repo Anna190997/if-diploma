@@ -1,0 +1,36 @@
+.shop {
+  display: flex;
+  flex-direction: row;
+}
+.images_card {
+  width: 50%;
+}
+.images_card_main {
+  width: 205%;
+}
+.images_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.images_wrapper_card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.more_icon {
+  width: 1%;
+}
+@media screen and (max-width: 500px) {
+  .images_wrapper {
+    flex-direction: column;
+  }
+  .images_wrapper_card {
+    flex-direction: column;
+  }
+  .images_card {
+    width: 100%;
+  }
+  .images_card_main {
+    width: 102%;
+  }
+}

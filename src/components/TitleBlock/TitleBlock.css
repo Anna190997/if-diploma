@@ -1,0 +1,16 @@
+.title_block {
+  padding-top: 80px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  color: #000f08;
+}
+.title_block_last {
+  font-weight: 600;
+}
+@media screen and (max-width: 500px) {
+  .title_block {
+    font-size: 24px;
+    padding-top: 50px;
+  }
+}

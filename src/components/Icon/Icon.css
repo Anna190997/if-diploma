@@ -1,0 +1,33 @@
+.icon, .icon_product{
+  width: 18px;
+  height: 18px;
+  padding: 30px 10px 0 0;
+  cursor: pointer;
+}
+.icon_invisible, .icon_invisible_product {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  .icon, .icon_product {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .icon_invisible,
+  .icon, .icon_invisible_product, .icon_product{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    padding: 30px 15px 0 0;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 315px) {
+  .icon_invisible,
+  .icon, .icon_invisible_product, .icon_product {
+    width: 20px;
+    height: 20px;
+  }
+}

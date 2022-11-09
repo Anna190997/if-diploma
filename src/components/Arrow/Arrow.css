@@ -1,0 +1,41 @@
+.more {
+  position: absolute;
+  cursor: pointer;
+  left: 97%;
+  width: 3%;
+  margin-top: 12%;
+}
+.less {
+  position: absolute;
+  cursor: pointer;
+  width: 3%;
+  right: 100%;
+  margin-top: 12%;
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 980px) {
+  .more,
+  .less {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .more,
+  .less {
+    margin-top: 7%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .more,
+  .less {
+    margin-top: 18%;
+    width: 5%;
+  }
+  .more {
+    left: 93%;
+  }
+  .less {
+    right: 97%;
+  }
+}

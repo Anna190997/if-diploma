@@ -1,0 +1,35 @@
+.button_header {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  border: 2px solid #ffffff;
+  margin: 360px 0 0 120px;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 990px) {
+  .button_header {
+    width: 16%;
+    height: 8%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .button_header {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .button_header {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .button_header {
+    display: none;
+  }
+}

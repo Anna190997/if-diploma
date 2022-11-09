@@ -1,0 +1,45 @@
+.navigate_elem {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 30px 15px 0 0;
+}
+.countBag {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 30px 15px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigate_elem,
+  .navigate_elem_product,
+  .countBag {
+    padding: 30px 10px 0 0;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigate_elem,
+  .navigate_elem_product,
+  .countBag {
+    padding: 30px 8px 0 0;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .navigate_elem,
+  .navigate_elem_product,
+  .countBag {
+    padding: 30px 6px 0 0;
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navigate_elem,
+  .navigate_elem_product,
+  .countBag {
+    display: none;
+  }
+}

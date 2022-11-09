@@ -1,0 +1,37 @@
+.input_search {
+  width: 15%;
+  height: 80px;
+  background-color: #ede7f0;
+  border: none;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  color: #000f08;
+  display: flex;
+  flex-direction: row;
+}
+.input_text {
+  padding-top: 28px;
+}
+.col-1 {
+  width: 15%;
+}
+
+@media screen and (max-width: 1050px) {
+  .input_search {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .input_search {
+    margin-top: 15px;
+  }
+  .col-1 {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .col-1 {
+    width: 45%;
+  }
+}

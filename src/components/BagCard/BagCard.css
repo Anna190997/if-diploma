@@ -1,0 +1,149 @@
+.bag_card {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 400px;
+}
+.bag_img {
+  width: 200px;
+}
+.bag_card_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.bag_img_card {
+  width: 80%;
+}
+.bag_description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.name_card_bag {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  color: #000f08;
+}
+.price_product_detail {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  color: #000f08;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.color_name {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  color: #000f08;
+}
+.select_color {
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.color_item {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  color: #000f08;
+}
+.color_detail_bag_card {
+  padding-top: 10px;
+}
+.remove_bag_wrap {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  padding-left: 150px;
+}
+.remove_bag_icon {
+  width: 20%;
+  height: 16px;
+  cursor: pointer;
+}
+.remove_bag {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  color: #000f08;
+  cursor: pointer;
+}
+.line_bag {
+  margin-top: 20px;
+}
+.bag_number {
+  display: flex;
+  flex-direction: row;
+}
+.bag_number_items {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 40px;
+  color: #000f08;
+}
+.count_bag,
+.bag_items {
+  font-family: Helvetica Neue LT Std, sans-serif;
+  font-size: 16px;
+  color: #8c8c8c;
+  padding-right: 5px;
+}
+.bag_number {
+  padding: 50px 400px;
+}
+.number {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+  padding-left: 20px;
+}
+.line_bag_number {
+  margin: 10px 400px;
+}
+button:disabled{
+  background-color: #5e5e5e;
+}
+@media screen and (max-width: 1000px) {
+  .bag_card {
+    padding: 20px 200px;
+  }
+  .bag_img {
+    width: 400px;
+  }
+  .bag_number {
+    padding: 20px 200px;
+  }
+  .line_bag_number {
+    margin: 10px 200px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bag_img {
+    width: 600px;
+  }
+  .bag_card {
+    padding: 20px 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bag_card {
+    padding: 20px 10px;
+  }
+  .bag_img {
+    width: 300px;
+  }
+  .name_card_bag {
+    font-size: 18px;
+  }
+  .price_product_detail {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .color_name {
+    font-size: 12px;
+  }
+  .bag_number {
+    padding: 20px 10px;
+  }
+  .line_bag_number {
+    margin: 10px 10px;
+  }
+}
