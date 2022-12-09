@@ -16,6 +16,8 @@ const BagCard = ({
   deleteProduct,
   onChange,
   valueSelect,
+  bagProducts,
+  setTotal,
 }) => {
   const dispatch = useDispatch();
 
@@ -23,13 +25,18 @@ const BagCard = ({
     onChange(e.target.value);
   };
 
-  const removeProduct = () => {
-    dispatch(BagAction.removeBagAction(deleteProduct));
-    dispatch(CountAction.decrement());
-  };
   useEffect(() => {
     dispatch(totalQuantity(id, valueSelect));
   }, [valueSelect]);
+
+  const removeProduct = () => {
+    dispatch(BagAction.removeBagAction(deleteProduct));
+    dispatch(CountAction.decrement());
+
+    setTotal(
+      bagProducts.reduce((previosValue, currentItem) => currentItem.price.value * valueSelect, 0),
+    );
+  };
 
   return (
     <div className="bag_card">

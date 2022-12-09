@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 export const apiMain = (setProduct) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    fetch('https://modnikky-api.herokuapp.com/api/catalog')
+    fetch('https://if-modnikky-api.onrender.com/api/catalog')
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
@@ -15,7 +15,7 @@ export const apiMain = (setProduct) => {
 };
 
 export const sendProduct = (bagItem, setProductSend) => {
-  fetch(`https://modnikky-api.herokuapp.com/api/cart`, {
+  fetch(`https://if-modnikky-api.onrender.com/api/cart`, {
     method: 'POST',
     body: JSON.stringify({ products: bagItem }),
     headers: {
@@ -32,7 +32,7 @@ export const sendProduct = (bagItem, setProductSend) => {
 };
 
 export const sendEmail = (inputEmail, setEmailSend) => {
-  fetch(`https://modnikky-api.herokuapp.com/api/subscription`, {
+  fetch(`https://if-modnikky-api.onrender.com/api/subscription`, {
     method: 'POST',
     body: JSON.stringify({ email: inputEmail }),
     headers: {

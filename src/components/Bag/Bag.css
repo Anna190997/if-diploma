@@ -76,17 +76,20 @@
     margin: 20px 10px;
   }
   .total_price_item {
-    padding: 10px 140px;
+    padding: 10px 80px;
   }
   .checkout_bag {
-    margin-left: 110px;
+    margin-left: 80px;
   }
   .pay_icon_wrapper {
-    margin-left: 140px;
+    margin-left: 70px;
   }
   .products_message{
     margin: 0 140px;
     font-size: 16px;
+  }
+  .total_price {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 360px) {

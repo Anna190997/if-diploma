@@ -12,6 +12,7 @@ import BagAction from '../../redux/actions/BagAction';
 import countAction from '../../redux/actions/CountAction';
 import NavigatePage from '../NavigatePage/NavigatePage';
 import { sendProduct } from '../../servicies';
+import CountAction from "../../redux/actions/CountAction";
 
 const Bag = () => {
   const [productSend, setProductSend] = useState('');
@@ -80,11 +81,13 @@ const Bag = () => {
                   currency={item.price.currency}
                   valuePrice={item.price.value}
                   colorProduct={item.color.name}
-                  size={item.availableSizes}
+                  size={item.availableSizes[0]}
                   deleteProduct={item.id}
                   onChange={selectChange}
                   id={item.id}
                   valueSelect={valueSelect}
+                  bagProducts={bagProducts}
+                  setTotal={setTotal}
                 />
               ))}
               <div className="total_price_wrapper">

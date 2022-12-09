@@ -20,6 +20,7 @@ const ProductDetails = () => {
             detailImages={item.images[0]}
             detailImagesSecond={item.images[1]}
             key={item.id}
+            size={item.availableSizes}
             productName={item.name}
             currency={item.price.currency}
             valuePrice={item.price.value}
